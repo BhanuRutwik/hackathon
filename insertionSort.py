@@ -1,4 +1,5 @@
 def insort(a):
+    print("file is changed")
     for i in range(1, len(a)):
         b = a[i]
         j = i - 1

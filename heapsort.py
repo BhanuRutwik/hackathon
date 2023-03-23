@@ -2,6 +2,7 @@ def heapify(arr, n, i):
     largest = i
     l = 2 * i + 1
     r = 2 * i + 2
+    print("first file change")
 
     if l < n and arr[i] < arr[l]:
         largest = l
