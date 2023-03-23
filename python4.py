@@ -20,4 +20,3 @@ print(json_data["Address"][0]["geo"])
 print()
 # Printing 'lat' details in Address/geo
 print("Printing 'lat' details in Address/geo:")
-print(json_data["Address"][0]["geo"]["lat"])
