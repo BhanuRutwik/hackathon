@@ -22,11 +22,11 @@ def get_changed_methods(commit_hash):
         file_diff_lines = file_diff.decode().split('\n')
 
         # Find lines starting with either 'def ' or 'async def '
-        method_lines = [line for line in file_diff_lines if 'def' in line or line.startswith('async def ')]
+        method_lines = [line.strip() for line in file_diff_lines if line.strip().startswith("def") or line.strip().startswith('async def ')]
 
         # Extract the method name from each line and add it to the set of changed methods
         for line in method_lines:
-            method_name = line.split(' ')[2].split('(')[0]
+            method_name = line.split(' ')[1].split('(')[0]
             changed_methods.add(method_name)
 
     return changed_methods
@@ -46,7 +46,7 @@ main_branch = repo.heads.main
 # Get the latest commit on the main branch
 latest_commit = main_branch.commit
 
-s = get_changed_methods(latest_commit)
+s = get_changed_methods(str(latest_commit))
 print(s)
 
 # Get the previous commit on the main branch
