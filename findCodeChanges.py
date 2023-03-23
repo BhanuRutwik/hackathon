@@ -1,5 +1,6 @@
 import git
-
+def sum():
+    print("hi")
 # Clone or open the Git repository
 repo = git.Repo("C:/Users/sbulusu/OneDrive - Informatica/Desktop/HackathonProject/hackathon/.git")
 
@@ -8,7 +9,7 @@ latest_commit = repo.head.commit
 
 # Get the list of files that were changed in the latest commit
 changed_files = [item.a_path for item in latest_commit.diff(None)]
-
+print(changed_files)
 # Iterate through the changed files and look for the methods that were changed
 for file_path in changed_files:
     # Check if the file is a Python file
@@ -19,7 +20,7 @@ for file_path in changed_files:
         # Iterate through the hunks in the diff
         for hunk in file_diff.iter_change_type('M'):
             # Iterate through the lines in the hunk
-            for line in hunk.diff.decode('utf-8').split('\n'):
+            for line in hunk.diff.split('\n'):
                 # Check if the line starts with a method definition
                 if line.startswith("def "):
                     # Extract the method name
