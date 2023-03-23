@@ -1,6 +1,4 @@
 file,lines_added,lines_removed,Code_Removed,Code_Added
-python1.py,3,2,"['-print(""Altitude = "", Locationinfo.altitude)\r', '-print(""This is for checking file changes"")\r']","['+print(""attitude = "", Locationinfo.altitude)\r', '+\r', '+print(""first file"")']"
-python2.py,2,4,"['-# Passing some random plot size(width, length) to the figure() function\r', '-print(""This is the file change"")\r', '-print(""asfasf"")\r', '-\r']","['+# Passing some random plot size(width, length) to the figure() \r', '+print(""second file"")\r']"
-python3.py,2,2,"['-print(""Third file change"")     \r', '-print(""asdf"")\r']","['+print(""Third file changeasdfasdf"")     \r', '+print(""third file"")']"
-python4.py,3,1,['-# Load/get the content of the given json file using the load() function of the\r'],"['+\r', '+\r', '+print(""fourth file"")']"
-python5.py,5,3,"['-# Use the seaborn library using use() function\r', '-# Load some random image by passing the filepath/name of the image to the imread() \r', '-plt.show()']","['+# Use the seaborn library using use() asdfasf\r', '+\r', '+plt.show()\r', '+\r', '+print(""fifth file"")']"
+binSearchRecursion.py,1,0,[],"['+    print(""bin search"")']"
+decToBin.py,1,0,[],"['+    print(""dec to bin"")']"
+squareRoot.py,1,0,[],"['+    print(""sqrt"")']"

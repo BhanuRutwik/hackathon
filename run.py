@@ -1,5 +1,36 @@
 import git
 import pandas as pd
+import subprocess
+
+def get_changed_methods(commit_hash):
+    # Use Git to get the diff of the current commit and its parent
+    diff = subprocess.check_output(['git', 'diff', '--name-only', commit_hash + '^', commit_hash])
+
+    # Split the diff output into individual file paths
+    file_paths = diff.decode().split('\n')
+
+    # Filter the file paths to include only Python files
+    py_files = [path for path in file_paths if path.endswith('.py')]
+
+    changed_methods = set()
+
+    for py_file in py_files:
+        # Use Git to get the diff of the current file
+        file_diff = subprocess.check_output(['git', 'diff', commit_hash + '^', commit_hash, '--', py_file])
+
+        # Split the file diff into individual lines
+        file_diff_lines = file_diff.decode().split('\n')
+
+        # Find lines starting with either 'def ' or 'async def '
+        method_lines = [line for line in file_diff_lines if 'def' in line or line.startswith('async def ')]
+
+        # Extract the method name from each line and add it to the set of changed methods
+        for line in method_lines:
+            method_name = line.split(' ')[2].split('(')[0]
+            changed_methods.add(method_name)
+
+    return changed_methods
+
 
 
 # Path to the Git repository
@@ -15,15 +46,17 @@ main_branch = repo.heads.main
 # Get the latest commit on the main branch
 latest_commit = main_branch.commit
 
+s = get_changed_methods(latest_commit)
+print(s)
+
 # Get the previous commit on the main branch
 previous_commit = latest_commit.parents[0]
 
 # Get the list of files changed between the previous and latest commits
 changed_files = repo.git.diff("--name-only", previous_commit, latest_commit).split()
 
-
 # Initialize a pandas DataFrame to store the results
-results_df = pd.DataFrame(columns=["file", "lines_added", "lines_removed" , "Code_Removed" , "Code_Added"])
+results_df = pd.DataFrame(columns=["file", "lines_added", "lines_removed" , "Code_Removed" , "Code_Added", "Method_Names"])
 
 # Iterate over each changed file and extract the lines added and removed
 for file in changed_files:
@@ -52,7 +85,7 @@ for file in changed_files:
 
 
     # Add the file and lines added and removed to the DataFrame
-    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Removed": code_removed ,"Code_Added": code_added}, ignore_index=True)
+    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Removed": code_removed ,"Code_Added": code_added,"Method_Names":s}, ignore_index=True)
 
 # Export the results to a CSV file
 results_df.to_csv("code_changes.csv", index=False)
