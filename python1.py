@@ -14,6 +14,7 @@ print("Latitude = ", Locationinfo.latitude)
 # Get the longitude of the above given location using the longitude attribute
 print("Longitude = ", Locationinfo.longitude)
 # Get the altitude of the above given location using the altitude attribute
-print("Altitude = ", Locationinfo.altitude)
+print("attitude = ", Locationinfo.altitude)
 
-print("This is for checking file changes")
+
+print("first file")

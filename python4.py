@@ -3,7 +3,7 @@ import json
 # Open some random json file using the open() function by passing the
 # filename/path as an argument to it and store it in a variable
 gvn_jsonfile = open("demo.json")
-# Load/get the content of the given json file using the load() function of the
+
 # json module and store it in another variable
 json_data = json.load(gvn_jsonfile)
 # Print the data of the given JSON file
@@ -20,3 +20,5 @@ print(json_data["Address"][0]["geo"])
 print()
 # Printing 'lat' details in Address/geo
 print("Printing 'lat' details in Address/geo:")
+
+print("fourth file")
