@@ -1,4 +1,5 @@
 def sqrt(n):
+    print("sqrt")
     x = n ** 0.5
     print(x)
 
