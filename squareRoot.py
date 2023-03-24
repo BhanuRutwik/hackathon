@@ -1,5 +1,5 @@
 def sqroot(n):
-    print("sqrt")
+    print("sqrt of number")
     x = n ** 0.5
     print(x)
 n=16
