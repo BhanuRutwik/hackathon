@@ -1,6 +1,8 @@
 import git
 import pandas as pd
 import subprocess
+from run1 import *
+from codeToMethodMapping import *
 
 def get_changed_methods(commit_hash):
     # Use Git to get the diff of the current commit and its parent
@@ -20,7 +22,7 @@ def get_changed_methods(commit_hash):
 
         # Split the file diff into individual lines
         file_diff_lines = file_diff.decode().split('\n')
-
+        
         # Find lines starting with either 'def ' or 'async def '
         method_lines = [line.strip() for line in file_diff_lines if line.strip().startswith("def") or line.strip().startswith('async def ')]
 
@@ -46,8 +48,9 @@ main_branch = repo.heads.main
 # Get the latest commit on the main branch
 latest_commit = main_branch.commit
 
-s = get_changed_methods(str(latest_commit))
-print(s)
+# methods_list = get_changed_methods(str(latest_commit))
+# print(methods_list)
+
 
 # Get the previous commit on the main branch
 previous_commit = latest_commit.parents[0]
@@ -55,15 +58,21 @@ previous_commit = latest_commit.parents[0]
 # Get the list of files changed between the previous and latest commits
 changed_files = repo.git.diff("--name-only", previous_commit, latest_commit).split()
 
+
 # Initialize a pandas DataFrame to store the results
 results_df = pd.DataFrame(columns=["file", "lines_added", "lines_removed" ,"Code_Changes", "Method_Names"])
 
 # Iterate over each changed file and extract the lines added and removed
 for file in changed_files:
+
+
      # Skip non-Python files
     if not file.endswith(".py"):
         continue
 
+    mapping = map_changes_to_methods(repo_path,file)
+    print(mapping)
+    
      # Get the diff of the file between the previous and latest commits
     diff_text = repo.git.diff("-U0", previous_commit, latest_commit, file)
 
@@ -85,7 +94,7 @@ for file in changed_files:
 
 
     # Add the file and lines added and removed to the DataFrame
-    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":s}, ignore_index=True)
+    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":mapping}, ignore_index=True)
 
 # Export the results to a CSV file
 results_df.to_csv("code_changes.csv", index=False)
