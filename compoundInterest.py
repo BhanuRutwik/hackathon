@@ -1,10 +1,12 @@
-n = int(input("Enter the principle amount:"))
+def compoundInterest():
+    n = int('10000')
 
-rate = int(input("Enter the rate:"))
+    rate = int('7')
 
-years = int(input("Enter the number of years:"))
+    years = int('10')
 
-for i in range(years):
-    n = n + ((n * rate) / 100)
-
-print(n)
+    for i in range(years):
+        n = n + ((n * rate) / 100)
+    print("compound interest")
+    print(n)
+compoundInterest()

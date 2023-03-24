@@ -1,9 +1,11 @@
 import numpy
+def inverseMatrix():
+    x = numpy.array([[1,2], [3,4]])
 
-x = numpy.array([[1,2], [3,4]])
+    y = numpy.linalg.inv(x)
 
-y = numpy.linalg.inv(x)
+    print(x)
 
-print(x)
-
-print (y)
+    print (y)
+inverseMatrix()
+print("inverse matrix")

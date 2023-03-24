@@ -56,7 +56,7 @@ previous_commit = latest_commit.parents[0]
 changed_files = repo.git.diff("--name-only", previous_commit, latest_commit).split()
 
 # Initialize a pandas DataFrame to store the results
-results_df = pd.DataFrame(columns=["file", "lines_added", "lines_removed" , "Code_Removed" , "Code_Added", "Method_Names"])
+results_df = pd.DataFrame(columns=["file", "lines_added", "lines_removed" ,"Code_Changes", "Method_Names"])
 
 # Iterate over each changed file and extract the lines added and removed
 for file in changed_files:
@@ -73,19 +73,19 @@ for file in changed_files:
     # Extract the lines added and removed
     lines_added = 0
     lines_removed = 0
-    code_added = []
-    code_removed = []
+    code_changes = []
+    
     for line in diff_lines:
         if line.startswith("+") and not line.startswith("+++"):
             lines_added += 1
-            code_added.append(line)
+            code_changes.append(line)
         elif line.startswith("-") and not line.startswith("---"):
             lines_removed += 1
-            code_removed.append(line)
+            code_changes.append(line)
 
 
     # Add the file and lines added and removed to the DataFrame
-    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Removed": code_removed ,"Code_Added": code_added,"Method_Names":s}, ignore_index=True)
+    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":s}, ignore_index=True)
 
 # Export the results to a CSV file
 results_df.to_csv("code_changes.csv", index=False)

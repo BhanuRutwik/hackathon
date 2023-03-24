@@ -1,5 +1,5 @@
 def binary(a, fir, las, term):
-    print("bin search changes")
+    print("binary search")
     mid=int((fir+las)/2)
     if term>a[mid]:
         binary(a, mid, las, term)

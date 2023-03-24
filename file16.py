@@ -4,4 +4,5 @@ def list_files():
     files = os.listdir('.')
     return [f for f in files if os.path.isfile(f)]
 
-print("Files in current directory:", list_files())
+print("Files that are in current directory:", list_files())
+print("file16")

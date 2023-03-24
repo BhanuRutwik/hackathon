@@ -1,8 +1,7 @@
-def sqrt(n):
+def sqroot(n):
     print("sqrt")
     x = n ** 0.5
     print(x)
-
-
-n = int(input("Enter the number whose square root you need to find: "))
-sqrt(n)
+n=16
+sqroot(n)
+print("square root")

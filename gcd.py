@@ -9,7 +9,7 @@ def gcd(a,b):
         if((a % i == 0) and (b % i == 0)):
             gd=i
     return gd
-a=int(input("Enter the first number: "))
-b=int(input("Enter second number: "))
+a = 5
+b = 8
 t=gcd(a,b)
-print("GCD is:",t)
+print("GCD :",t)
