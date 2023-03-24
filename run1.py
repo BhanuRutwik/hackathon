@@ -151,13 +151,14 @@ prev_commit = repo.head.commit.parents[0]
 current_commit = repo.head.commit
 
 # Get the diff between the previous and current commits
-diff = prev_commit.diff(current_commit)
-print(diff)
-
+d = prev_commit.diff(current_commit)
+print(d)
 # Loop through the diff and extract method changes
-for change in diff.iter_change_type('M'):
+for change in d.iter_change_type('M'):
+    # print(change)
     # Get the file path and diff content
     file_path = change.b_path
+    print(file_path)
     diff_content = change.diff
     print(diff_content)
     

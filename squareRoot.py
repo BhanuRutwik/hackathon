@@ -1,5 +1,5 @@
 def sqroot(n):
-    print("hello-world")
+    print("hello")
     x = n ** 0.5
     print(x)
 n=16
