@@ -48,8 +48,8 @@ main_branch = repo.heads.main
 # Get the latest commit on the main branch
 latest_commit = main_branch.commit
 
-# methods_list = get_changed_methods(str(latest_commit))
-# print(methods_list)
+methods_list = get_changed_methods(str(latest_commit))
+print(methods_list)
 
 
 # Get the previous commit on the main branch
@@ -70,9 +70,9 @@ for file in changed_files:
     if not file.endswith(".py"):
         continue
 
-    mapping = map_changes_to_methods(repo_path,file)
-    print(mapping)
-    
+    # mapping = map_changes_to_methods(repo_path,file)
+    # print(mapping)
+
      # Get the diff of the file between the previous and latest commits
     diff_text = repo.git.diff("-U0", previous_commit, latest_commit, file)
 
@@ -94,7 +94,7 @@ for file in changed_files:
 
 
     # Add the file and lines added and removed to the DataFrame
-    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":mapping}, ignore_index=True)
+    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":methods_list}, ignore_index=True)
 
 # Export the results to a CSV file
 results_df.to_csv("code_changes.csv", index=False)
