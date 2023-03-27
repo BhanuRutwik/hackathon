@@ -91,8 +91,7 @@ for file in changed_files:
         elif line.startswith("-") and not line.startswith("---"):
             lines_removed += 1
             code_changes.append(line)
-
-
+        
     # Add the file and lines added and removed to the DataFrame
     results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":methods_list}, ignore_index=True)
 
