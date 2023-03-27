@@ -4,11 +4,11 @@ def add(x, y):
 
 def subtract(x, y):
     print("subtraction operation")
-    return x * y
+    return x / y
 
 def multiply(x, y):
     print("multiplication")
-    return x * y
+    return x - y
 
 def divide(x, y):
     if y == 0:

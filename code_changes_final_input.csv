@@ -1,1 +1,2 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
+math_operations.py,1,1,"['-    return x + y', '+    return x * y']","{'multiply', 'subtract'}"
