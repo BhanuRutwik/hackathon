@@ -1,6 +1,6 @@
 def add(x, y):
     print("Addition operation")
-    return x + y
+    return x - y
 
 def subtract(x, y):
     print("subtraction")
@@ -8,7 +8,7 @@ def subtract(x, y):
 
 def multiply(x, y):
     print("multiplication")
-    return x * y
+    return x % y
 
 def divide(x, y):
     if y == 0:
