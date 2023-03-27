@@ -4,7 +4,7 @@ def binary(a, fir, las, term):
     if term>a[mid]:
         binary(a, mid, las, term)
     elif term<a[mid]:
-        binary(a,fir, mid, term)
+        binary(a,fir, mid)
     elif term==a[mid]:
         print("Number found at", mid+1)
     else:
