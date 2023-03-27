@@ -36,7 +36,7 @@ def get_changed_methods(commit_hash):
 
 
 # Path to the Git repository
-repo_path = "C:/Users/sbulusu/OneDrive - Informatica/Desktop/HackathonProject/hackathon/.git"
+repo_path = "C:/Users/adkhandelwal/Desktop/Hack_Code/.git"
 
 
 # Create a Git repository object
