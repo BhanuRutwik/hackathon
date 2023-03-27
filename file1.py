@@ -6,6 +6,7 @@ def file1():
 
     # Transpose the array
     arr_transposed = arr.T
+    print("adithya")
     print(arr_transposed)
 
     # Flatten the array

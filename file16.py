@@ -1,6 +1,7 @@
 import os
 
 def list_files():
+    print("finding the list")
     files = os.listdir('.')
     return [f for f in files if os.path.isfile(f)]
 

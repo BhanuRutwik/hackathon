@@ -2,7 +2,7 @@ import random as rd
 def random():
     print(rd.random())
     #gives a random float number
-    print(rd.randint(1,100))
+    print(rd.randint(1,200))
     #gives a random integer between these 2 numbers
 
     print(rd.randrange(1,100))
