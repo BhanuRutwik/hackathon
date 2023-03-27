@@ -1,5 +1,5 @@
 def gcd(a,b):
-    print("asf")
+    print("this is gcd program")
     small=0
     gd=0
     if a>b:
