@@ -3,3 +3,5 @@ run1.py
 Impacted_tests.csv
 demo.py.ipynb
 Untitled.ipynb
+__pycache__
+.ipynb_checkpoints
