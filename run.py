@@ -93,7 +93,7 @@ for file in changed_files:
             code_changes.append(line)
         
     # Add the file and lines added and removed to the DataFrame
-    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,"Method_Names":methods_list}, ignore_index=True)
-
+    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes}, ignore_index=True)
+    results_df['Method_Names']=methods_list
 # Export the results to a CSV file
 results_df.to_csv("code_changes.csv", index=False)

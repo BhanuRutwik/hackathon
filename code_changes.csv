@@ -1,3 +1,1 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-gcd.py,1,1,"['-    print(""asf"")', '+    print(""this is gcd program"")']","['sqroot', 'gcd']"
-squareRoot.py,1,1,"['-    print(""hello"")', '+    print(""this is square root program"")']","['sqroot', 'gcd']"
