@@ -1,6 +1,9 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-binSearchRecursion.py,0,1,"['-    print(""binary search1234"")']",binary
-file3.py,1,0,"[""+    print('324')""]",get_html
-file4.py,1,0,"[""+    print('asdf')""]",sum_of_squares
-gcd.py,1,0,"[""+    print('2')""]",gcd
-squareRoot.py,1,1,"[""-    print('345')"", ""+    print('34567')""]",sqroot
+area.py,1,1,"['-', ""+    print('afsd')""]",area
+compoundInterest.py,1,1,"[""-    print('compound interest')"", ""+    print('compound interestasf')""]",compoundInterest
+file3.py,1,1,"[""-    print('324')"", ""+    print('324asfd')""]",get_html
+file4.py,1,1,"[""-    print('asdf')"", ""+    print('asdfasdf')""]",sum_of_squares
+gcd.py,1,1,"[""-    print('2')"", ""+    print('2asf')""]",gcd
+inverseMatrix.py,1,1,"[""-    print('123')"", ""+    print('123asdf')""]",inverseMatrix
+squareRoot.py,1,1,"[""-    print('34567')"", ""+    print('34567afds')""]",sqroot
+string_operations.py,1,1,"[""-    print('4asf')"", ""+    print('4asfasfd')""]",to_uppercase
