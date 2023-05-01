@@ -1,4 +1,7 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-palindrome.py,1,0,"[""+    print('program for palindrome')""]","{'palindrome', 'sqroot', 'random'}"
-randomNumber.py,1,0,"['+    print(""random number generation"")']","{'palindrome', 'sqroot', 'random'}"
-squareRoot.py,0,2,"['-    print(""this is square root program"")', '-    pritn(""new change done today"")']","{'palindrome', 'sqroot', 'random'}"
+file3.py,1,0,"['+    print(""get_html program"")']",get_html
+file4.py,1,1,"['-    print(""xyz"")', '+    print(""sum of squares program"")']",sum_of_squares
+file5.py,1,0,"['+    print(""another palindrome program"")']",is_palindrome
+inverseMatrix.py,1,0,"['+    print(""inverse matrix program"")']",inverseMatrix
+squareRoot.py,1,0,"[""+    print('square root program')""]",sqroot
+string_operations.py,2,0,"['+    print(""reverse string program"")', '+    print(""uppercase string program"")']",to_lowercase
