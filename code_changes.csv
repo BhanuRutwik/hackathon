@@ -1,2 +1,4 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-math_operations.py,2,2,"['-    return x + y', '+    return x - y', '-    return x * y', '+    return x % y']","{'subtract', 'multiply', 'divide', 'add'}"
+file3.py,1,0,"[""+    print('go to hell and heaven')""]","{'gcd', 'get_html', 'sqroot'}"
+gcd.py,1,0,"['+    print(""these are new changes"")']","{'gcd', 'get_html', 'sqroot'}"
+squareRoot.py,1,0,"['+    pritn(""new change done today"")']","{'gcd', 'get_html', 'sqroot'}"
