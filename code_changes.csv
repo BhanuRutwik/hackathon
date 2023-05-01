@@ -1,3 +1,4 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-addNumbers.py,0,1,"['-    print(""this is program for adding numbers"")']",set()
-area.py,0,1,"['-    print(""This is program for calculating area"")']",set()
+palindrome.py,1,0,"[""+    print('program for palindrome')""]","{'palindrome', 'sqroot', 'random'}"
+randomNumber.py,1,0,"['+    print(""random number generation"")']","{'palindrome', 'sqroot', 'random'}"
+squareRoot.py,0,2,"['-    print(""this is square root program"")', '-    pritn(""new change done today"")']","{'palindrome', 'sqroot', 'random'}"

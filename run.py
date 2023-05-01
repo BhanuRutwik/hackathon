@@ -14,7 +14,7 @@ def get_changed_methods(commit_hash):
     # Filter the file paths to include only Python files
     py_files = [path for path in file_paths if path.endswith('.py')]
 
-    changed_methods = set()
+    changed_methods = dict()
 
     for py_file in py_files:
         # Use Git to get the diff of the current file
@@ -29,7 +29,7 @@ def get_changed_methods(commit_hash):
         # Extract the method name from each line and add it to the set of changed methods
         for line in method_lines:
             method_name = line.split(' ')[1].split('(')[0]
-            changed_methods.add(method_name)
+            changed_methods[py_file]=method_name
 
     return changed_methods
 
@@ -92,8 +92,9 @@ for file in changed_files:
             lines_removed += 1
             code_changes.append(line)
         
+    
     # Add the file and lines added and removed to the DataFrame
-    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,'Method_Names':methods_list}, ignore_index=True)
+    results_df = results_df.append({"file": file, "lines_added": lines_added, "lines_removed": lines_removed ,"Code_Changes": code_changes,'Method_Names':methods_list[file]}, ignore_index=True)
 
 # Export the results to a CSV file
 results_df.to_csv("code_changes.csv", index=False)
