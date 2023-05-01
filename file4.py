@@ -1,6 +1,7 @@
 import numpy as np
 
 def sum_of_squares(n):
+    print('asdf')
     print('sum of squares')
     return np.sum(np.arange(1, n+1)**2)
 
