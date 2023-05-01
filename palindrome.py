@@ -1,4 +1,5 @@
 def palindrome():
+    print('program for palindrome')
     #program to check given number is palindrome or not
     
     n = 121

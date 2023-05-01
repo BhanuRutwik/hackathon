@@ -1,4 +1,3 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-file3.py,1,0,"[""+    print('go to hell and heaven')""]","{'gcd', 'get_html', 'sqroot'}"
-gcd.py,1,0,"['+    print(""these are new changes"")']","{'gcd', 'get_html', 'sqroot'}"
-squareRoot.py,1,0,"['+    pritn(""new change done today"")']","{'gcd', 'get_html', 'sqroot'}"
+addNumbers.py,0,1,"['-    print(""this is program for adding numbers"")']",set()
+area.py,0,1,"['-    print(""This is program for calculating area"")']",set()

@@ -1,5 +1,6 @@
 import random as rd
 def random():
+    print("random number generation")
     print(rd.random())
     #gives a random float number
     print(rd.randint(1,200))
