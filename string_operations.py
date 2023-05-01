@@ -1,7 +1,9 @@
 def reverse_string(s):
+    print("reverse string program")
     return s[::-1]
 
 def to_uppercase(s):
+    print("uppercase string program")
     return s.upper()
 
 def to_lowercase(s):
