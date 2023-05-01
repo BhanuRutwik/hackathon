@@ -1,5 +1,5 @@
 def compoundInterest():
-    print('compound interest')
+    print('compound interestasf')
     n = int('10000')
 
     rate = int('7')
