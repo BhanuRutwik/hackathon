@@ -1,6 +1,6 @@
 import numpy
 def inverseMatrix():
-    print('1')
+    print('123')
     x = numpy.array([[1,2], [3,4]])
     y = numpy.linalg.inv(x)
     print(x)

@@ -7,6 +7,5 @@ def compoundInterest():
 
     for i in range(years):
         n = n + ((n * rate) / 100)
-    print("compound interest")
     print(n)
 compoundInterest()
