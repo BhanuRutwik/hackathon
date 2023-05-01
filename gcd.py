@@ -1,5 +1,4 @@
 def gcd(a,b):
-    print('gcd program')
     small=1
     gd=0
     if a>b:
