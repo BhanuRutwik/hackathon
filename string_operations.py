@@ -1,5 +1,5 @@
 def reverse_string(s):
-    print('4')
+    print('4asf')
     return s[::-1]
 
 def to_uppercase(s):

@@ -1,5 +1,6 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
+binSearchRecursion.py,0,1,"['-    print(""binary search1234"")']",binary
+file3.py,1,0,"[""+    print('324')""]",get_html
+file4.py,1,0,"[""+    print('asdf')""]",sum_of_squares
 gcd.py,1,0,"[""+    print('2')""]",gcd
-inverseMatrix.py,1,0,"[""+    print('1')""]",inverseMatrix
-squareRoot.py,1,0,"[""+    print('3')""]",sqroot
-string_operations.py,1,0,"[""+    print('4')""]",to_uppercase
+squareRoot.py,1,1,"[""-    print('345')"", ""+    print('34567')""]",sqroot
