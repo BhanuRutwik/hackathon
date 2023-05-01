@@ -1,12 +1,2 @@
-file,lines_added,lines_removed,code_changes,Method_Names,Impacted_tests
-math_operations.py,4,2,"['-    print(""Addition operation"")', '+    print(""Addition operation1"")', '-    print(""subtraction operation"")', '+    print(""subtraction operation1"")', '+    print(""extra activites"")', '+        print(""divide error"")']",add,test_add
-math_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",subtract,test_subtract
-math_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",multiply,test_multiply
-math_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",divide,"test_divide,test_divide_error"
-math_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",power,"test_power,test_power2"
-math_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",modulus,test_modulus
-string_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",reverse_string,test_reverse_string
-string_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",to_uppercase,test_to_uppercase
-string_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",to_lowercase,test_to_lowercase
-string_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",is_palindrome,"test_is_palindrome,test_not_palindrome"
-string_operations.py,4,2,"['+    print(""sampleRun"")', '+    print(""testDrive"")']",count_vowels,"test_count_vowels,test_count_consonants"
+file,lines_added,lines_removed,Code_Changes,Method_Names
+math_operations.py,2,2,"['-    return x + y', '+    return x - y', '-    return x * y', '+    return x % y']","{'subtract', 'multiply', 'divide', 'add'}"

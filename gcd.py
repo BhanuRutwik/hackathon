@@ -1,5 +1,6 @@
 def gcd(a,b):
     print("this is gcd program")
+    print("these are new changes")
     small=1
     gd=0
     if a>b:
