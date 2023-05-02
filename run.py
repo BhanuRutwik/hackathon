@@ -25,10 +25,11 @@ def get_changed_methods(commit_hash):
         
         # Find lines starting with either 'def ' or 'async def '
         method_lines = [line.strip() for line in file_diff_lines if line.strip().startswith("def") or line.strip().startswith('async def ')]
-
+        print("method lines-----",method_lines)
         # Extract the method name from each line and add it to the set of changed methods
         for line in method_lines:
             method_name = line.split(' ')[1].split('(')[0]
+            print("line",line)
             changed_methods[py_file]=method_name
 
     return changed_methods

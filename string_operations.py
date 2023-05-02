@@ -10,11 +10,13 @@ def to_lowercase(s):
     return s.lower()
 
 def is_palindrome(s):
+    print('palindrome')
     s = s.lower()
     s = ''.join(filter(str.isalnum, s))
     return s == s[::-1]
 
 def count_vowels(s):
+    print('vowels')
     vowels = 'aeiou'
     count = 0
     for char in s.lower():

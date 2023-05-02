@@ -1,9 +1,6 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-area.py,1,1,"['-', ""+    print('afsd')""]",area
-compoundInterest.py,1,1,"[""-    print('compound interest')"", ""+    print('compound interestasf')""]",compoundInterest
-file3.py,1,1,"[""-    print('324')"", ""+    print('324asfd')""]",get_html
-file4.py,1,1,"[""-    print('asdf')"", ""+    print('asdfasdf')""]",sum_of_squares
-gcd.py,1,1,"[""-    print('2')"", ""+    print('2asf')""]",gcd
-inverseMatrix.py,1,1,"[""-    print('123')"", ""+    print('123asdf')""]",inverseMatrix
-squareRoot.py,1,1,"[""-    print('34567')"", ""+    print('34567afds')""]",sqroot
-string_operations.py,1,1,"[""-    print('4asf')"", ""+    print('4asfasfd')""]",to_uppercase
+file3.py,1,1,"[""-    print('324asfd')"", ""+    print('324asfdasf')""]",get_html
+gcd.py,1,1,"[""-    print('2asf')"", ""+    print('2asfasf')""]",gcd
+inverseMatrix.py,1,1,"[""-    print('123asdf')"", ""+    print('123asdfasfd')""]",inverseMatrix
+squareRoot.py,1,1,"[""-    print('34567afds')"", ""+    print('34567afdsasdf')""]",sqroot
+string_operations.py,2,1,"[""-    print('4asfasfd')"", ""+    print('4asfasfdasdf')"", ""+    print('uppercase')""]",to_lowercase
