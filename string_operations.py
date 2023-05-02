@@ -1,9 +1,9 @@
 def reverse_string(s):
-    print('4asfasfdasdf')
+    print('asdf')
     return s[::-1]
 
 def to_uppercase(s):
-    print('uppercase')
+    print('adsfupper')
     return s.upper()
 
 def to_lowercase(s):
