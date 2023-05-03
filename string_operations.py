@@ -1,16 +1,15 @@
 def reverse_string(s):
-    print('asdf')
+    print('reverse')
     return s[::-1]
 
 def to_uppercase(s):
-    print('adsfupperasdf')
+    print('uppercase')
     return s.upper()
 
 def to_lowercase(s):
     return s.lower()
 
 def is_palindrome(s):
-    print('palindromeasfd')
     s = s.lower()
     s = ''.join(filter(str.isalnum, s))
     return s == s[::-1]

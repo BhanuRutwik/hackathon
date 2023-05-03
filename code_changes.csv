@@ -1,6 +1,5 @@
 file,lines_added,lines_removed,Code_Changes,Method_Names
-file3.py,1,1,"[""-    print('324asfd')"", ""+    print('324asfdasf')""]",get_html
-gcd.py,1,1,"[""-    print('2asf')"", ""+    print('2asfasf')""]",gcd
-inverseMatrix.py,1,1,"[""-    print('123asdf')"", ""+    print('123asdfasfd')""]",inverseMatrix
-squareRoot.py,1,1,"[""-    print('34567afds')"", ""+    print('34567afdsasdf')""]",sqroot
-string_operations.py,2,1,"[""-    print('4asfasfd')"", ""+    print('4asfasfdasdf')"", ""+    print('uppercase')""]",to_lowercase
+gcd.py,1,1,"[""-    print('aditya')"", ""+    print('adityaasdf')""]",gcd
+inverseMatrix.py,1,1,"[""-    print('aditya')"", ""+    print('adityaasdf')""]",inverseMatrix
+squareRoot.py,1,1,"[""-    print('adsf')"", ""+    print('adsfasdf')""]",sqroot
+string_operations.py,2,2,"[""-    print('adsfupper')"", ""+    print('adsfupperasdf')"", ""-    print('palindrome')"", ""+    print('palindromeasfd')""]",is_palindrome
