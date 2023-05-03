@@ -1,5 +1,0 @@
-file,lines_added,lines_removed,Code_Changes,Method_Names
-gcd.py,1,1,"[""-    print('aditya')"", ""+    print('adityaasdf')""]",gcd
-inverseMatrix.py,1,1,"[""-    print('aditya')"", ""+    print('adityaasdf')""]",inverseMatrix
-squareRoot.py,1,1,"[""-    print('adsf')"", ""+    print('adsfasdf')""]",sqroot
-string_operations.py,2,2,"[""-    print('adsfupper')"", ""+    print('adsfupperasdf')"", ""-    print('palindrome')"", ""+    print('palindromeasfd')""]",is_palindrome
