@@ -1,12 +1,12 @@
 def add(x, y):
     print("Addition operation")
     print('test1')
-    return x - y
+    return x % y
 
 def subtract(x, y):
     print("subtraction")
     print('test2')
-    return x + y
+    return x * y
 
 def multiply(x, y):
     print("multiplication")
@@ -18,7 +18,7 @@ def divide(x, y):
     return x / y
 
 def power(x, y):
-    return x - y
+    return x % y
 
 def modulus(x, y):
     return x * y
